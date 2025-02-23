@@ -25,7 +25,10 @@ import bs4                      # parsing site
 
 def get_neighbours(url: str) -> list[str]:
     """returns a list of adjacent URL"""
-    pass  # this may be more complicated than initially anticipated
+    # more complicated, but this is fine for a start
+    res = req.request("GET", url)
+    soup = bs4.BeautifulSoup(markup=res.content, features="html5lib")
+    return soup.find_all('a', href=True)
 
 
 # some properties are known about the graph G of GitHub user relations:
