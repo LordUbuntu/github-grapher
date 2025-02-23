@@ -5,11 +5,6 @@
 # The start of a larger project that will get it's own repo once I figure
 #   out a better name for it and have more time.
 
-# Name Ideas:
-# - "neighbourhood"
-# - "git net"
-# - "github graph"
-
 # This version will be just a CLI tool to scan and visualize connections rapidly,
 #   but in the future I'll do an interactive version with jupyter notebooks
 #   and / or some framework like Dash
@@ -26,6 +21,11 @@ import multiprocessing as mp    # multiprocessing for faster execution
 import graphviz as gv           # generate .gv and .svg files to render graph
 import requests as req          # getting requests from site
 import bs4                      # parsing site
+
+
+def get_neighbours(url: str) -> list[str]:
+    """returns a list of adjacent URL"""
+    pass  # this may be more complicated than initially anticipated
 
 
 # some properties are known about the graph G of GitHub user relations:
