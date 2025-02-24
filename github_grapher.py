@@ -25,7 +25,10 @@ import bs4                      # parsing site
 
 def get_neighbours(url: str) -> list[str]:
     """returns a list of adjacent URL"""
-    # more complicated, but this is fine for a start
+    # get contents of URL request (GitHub API?)
+    # parse with bs4 for href tags
+    # extract URL strings into list
+    # return list of URL strings
     res = req.request("GET", url)
     soup = bs4.BeautifulSoup(markup=res.content, features="html5lib")
     return soup.find_all('a', href=True)
