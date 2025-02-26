@@ -18,6 +18,7 @@
 # - multiprocessing queue for fast performance
 import argparse                 # CLI
 import multiprocessing as mp    # multiprocessing for faster execution
+# should I use plotly? Maybe for the web interface using DASH?
 import graphviz as gv           # generate .gv and .svg files to render graph
 import requests as req          # getting requests from site
 import bs4                      # parsing site
