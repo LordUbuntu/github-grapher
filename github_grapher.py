@@ -30,10 +30,10 @@ def get_neighbours(url: str) -> list[str]:
     res = req.request("GET", url)
     if res.ok:
         html = res.content
-    # parse with bs4 for href tags
-    # extract URL strings into list
-    # return list of URL strings
-    soup = bs4.BeautifulSoup(markup=res.content, features="html5lib")
+        # parse with bs4 for href tags
+        # extract URL strings into list
+        # return list of URL strings
+        soup = bs4.BeautifulSoup(markup=res.content, features="html5lib")
     return soup.find_all('a', href=True)
 
 
