@@ -30,11 +30,14 @@ def get_neighbours(url: str) -> list[str]:
     res = req.request("GET", url)
     if res.ok:
         html = res.content
-        # parse with bs4 for href tags
-        # extract URL strings into list
-        # return list of URL strings
-        soup = bs4.BeautifulSoup(markup=res.content, features="html5lib")
-    return soup.find_all('a', href=True)
+    # parse with bs4 for href tags
+    soup = bs4.BeautifulSoup(markup=res.content, features="html5lib")
+    # extract URL strings into list
+    raw_urls = soup.find_all('a', href=True)
+    # TODO: how to get the links to other user pages from this info?
+
+    # return list of URL strings
+    return urls
 
 
 # some properties are known about the graph G of GitHub user relations:
