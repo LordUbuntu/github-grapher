@@ -8,6 +8,8 @@
 # This version will be just a CLI tool to scan and visualize connections rapidly,
 #   but in the future I'll do an interactive version with jupyter notebooks
 #   and / or some framework like Dash
+# (2025-06-30) I need to come back to this project and figure out how to
+#   scrape followers and following from github foreach user page...
 
 
 # Features:
